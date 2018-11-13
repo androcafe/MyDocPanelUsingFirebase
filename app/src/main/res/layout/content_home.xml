@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HomeActivity"
+    android:orientation="vertical"
+    android:layout_marginTop="0dp"
+    tools:showIn="@layout/app_bar_home">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_bg"
+            android:padding="10dp"
+            android:clickable="true"
+            android:id="@+id/find_doc">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView_find_doc"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="@string/string_find_doc"
+                android:id="@+id/textVIew_find_doc"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_bg"
+            android:padding="10dp"
+            android:clickable="true"
+            android:id="@+id/fav_doc">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView_fav_doc"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="@string/string_fav_doc"
+                android:id="@+id/textVIew_fav_doc"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_bg"
+            android:padding="10dp"
+            android:clickable="true"
+            android:id="@+id/my_booking">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView_my_booking"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="@string/string_my_booking"
+                android:id="@+id/textVIew_my_booking"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

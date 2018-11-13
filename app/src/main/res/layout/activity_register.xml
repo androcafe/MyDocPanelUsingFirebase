@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edittext"
+            android:padding="10dp"
+            android:drawableLeft="@raw/phone"
+            android:hint="@string/string_mobile_no"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="10"
+            android:windowSoftInputMode="adjustResize"
+            android:textColor="@android:color/black"
+            android:id="@+id/edittext_mobile_no"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edittext"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:drawableLeft="@raw/lock"
+            android:hint="@string/string_password"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:maxLength="15"
+            android:textColor="@android:color/black"
+            android:id="@+id/edittext_password"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edittext"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:drawableLeft="@raw/lock"
+            android:hint="@string/hint_confirm_password"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:maxLength="15"
+            android:textColor="@android:color/black"
+            android:id="@+id/edittext_confirm_password"/>
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_bg"
+            android:textColor="@android:color/black"
+            android:text="@string/string_register"
+            android:id="@+id/button_register"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

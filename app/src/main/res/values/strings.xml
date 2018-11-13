@@ -1,3 +1,55 @@
 <resources>
-    <string name="app_name">MyDocPanelUsingFirebase</string>
+    <string name="app_name">Doctors Appointment</string>
+
+    <!-- Login Page -->
+    <string name="string_get_started">Get Started</string>
+    <string name="string_just">Just a few details to get started</string>
+    <string name="string_mobile_no">Mobile Number</string>
+    <string name="string_password">Password</string>
+    <string name="string_login">Login</string>
+    <string name="string_new_user">New User</string>
+    <string name="string_forget_pw">Forgot password?</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <!-- Register Page-->
+    <string name="string_register">Register</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+
+    <!-- Home Fragment -->
+    <string name="string_find_doc">Find Doctors</string>
+    <string name="string_fav_doc">Favorite Doctor</string>
+    <string name="string_my_booking">My Booking</string>
+
+    <!-- Find Doctors Activity -->
+    <string name="string_book">Book Appointment</string>
+    <string name="string_call">Call</string>
+
+    <!--Book An Appointment Dialog -->
+    <string name="string_name">Name</string>
+    <string name="string_treatement">Treatment</string>
+    <string name="string_date">Select Date</string>
+    <string name="string_time">Time</string>
+    <string name="string_age">Age</string>
+    <string name="string_submit">Submit</string>
+    <string name="string_cancel">Cancel</string>
+
+
+    <!-- My Apoointment -->
+    <string name="string_apmt_details">Appointment Details</string>
+    <string name="string_pateint">Patient</string>
+    <string name="string_doctor">Doctor</string>
+    <string name="string_date_apmt">Date</string>
+    <string name="string_status">Status</string>
+
 </resources>
