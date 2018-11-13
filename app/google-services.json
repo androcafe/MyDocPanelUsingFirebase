@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "175240351741",
+    "firebase_url": "https://docappusingfirebase.firebaseio.com",
+    "project_id": "docappusingfirebase",
+    "storage_bucket": "docappusingfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175240351741:android:ff14a978b1e1ded5",
+        "android_client_info": {
+          "package_name": "visitindia.androcafe.mydocpanelusingfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175240351741-phstnb1acuvl0hgr79o8dgf0eebrsm43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "visitindia.androcafe.mydocpanelusingfirebase",
+            "certificate_hash": "295ddfe98a786ebd914d52ba1163d9dd4d0a8a7a"
+          }
+        },
+        {
+          "client_id": "175240351741-rcqi2httpepl11esi3auu1d2onei24js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzApSHeQRFDJVjjz59yqqcmKtACw7ke_8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175240351741-rcqi2httpepl11esi3auu1d2onei24js.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
