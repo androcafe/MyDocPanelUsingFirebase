@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import visitindia.androcafe.mydocpanelusingfirebase.R;
 import visitindia.androcafe.mydocpanelusingfirebase.doctorsappointment.adapter.ViewPagerAdapter;
 import visitindia.androcafe.mydocpanelusingfirebase.doctorsappointment.home.FindDoctorsActivity;
 

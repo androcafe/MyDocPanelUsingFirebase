@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import visitindia.androcafe.mydocpanelusingfirebase.R;
 import visitindia.androcafe.mydocpanelusingfirebase.model.User;
 
 public class RegisterActivity extends AppCompatActivity {

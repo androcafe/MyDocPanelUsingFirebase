@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
+import visitindia.androcafe.mydocpanelusingfirebase.R;
 import visitindia.androcafe.mydocpanelusingfirebase.doctorsappointment.MyAppointmentActivity;
 import visitindia.androcafe.mydocpanelusingfirebase.model.MyAppointment;
 

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name=".doctorsappointment.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:noHistory="true">
             <intent-filter>
@@ -20,21 +20,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".doctorsappointment.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:noHistory="true"/>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".doctorsappointment.RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".doctorsappointment.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar"
             android:noHistory="true"/>
 
-        <activity android:name=".home.FindDoctorsActivity"></activity>
+        <activity android:name=".doctorsappointment.home.FindDoctorsActivity"></activity>
 
-        <activity android:name=".MyAppointmentActivity"></activity>
+        <activity android:name=".doctorsappointment.MyAppointmentActivity"></activity>
     </application>
 
 </manifest>
