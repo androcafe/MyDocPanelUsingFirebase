@@ -190,14 +190,6 @@ public class LoginActivity extends AppCompatActivity {
                     });
                 }
 
-                if (progressBarStatus[0] >= 100) {
-                    try {
-                        Thread.sleep(2000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-
-                }
             }
         }).start();
 
