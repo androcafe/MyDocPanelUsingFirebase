@@ -12,7 +12,7 @@
     
 Output for following project :
 <div align="center">
-    <img src="https://user-images.githubusercontent.com/35371687/48601906-75c55400-e997-11e8-8ba8-b4b2832a3374.png" width="400px"></img> 
+    <img src="https://user-images.githubusercontent.com/35371687/48602479-49123c00-e999-11e8-99e2-b3381f369935.png" width="400px" height="200px"></img> 
 </div>
    
     
