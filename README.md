@@ -10,9 +10,8 @@
 <b>Crashlytics</b> : Prioritize and fix issues with powerful, realtime crash reporting<br>
     and much more.
     
-<b>Steps to create project in firebase console : </b>
-1. Add the Realtime Database to your app
-
+<b>Add Firebase to Your Android Project refer below link: </b>
+  https://firebase.google.com/docs/android/setup 
     
 Output for following project :
 <div align="center">
