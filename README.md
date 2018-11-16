@@ -1,8 +1,7 @@
 # MyDocPanelUsingFirebase
 
-<b><font color="red">This tutorial demonstrates how to write a mobile app with backend data storage, real-time synchronization.</font><br><br>
-
-Firebase gives facility to :<br>
+<b>This tutorial demonstrates how to write a mobile app with backend data storage, real-time synchronization.<br>
+<b>Firebase gives facility to :<b><br><br>
 <b>Realtime Database</b> : store and sync app data in milliseconds.<br>
 <b>Hosting</b> : Deliver web app assets with speed and security<br>
 <b>Authentication</b> : Authenticate users simply and securely<br>
