@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -26,11 +27,14 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.Calendar;
-import visitindia.androcafe.mydocpanelusingfirebase.R;
+
 import de.hdodenhof.circleimageview.CircleImageView;
+import visitindia.androcafe.mydocpanelusingfirebase.R;
 import visitindia.androcafe.mydocpanelusingfirebase.doctorsappointment.DoctorInterface;
+import visitindia.androcafe.mydocpanelusingfirebase.doctorsappointment.LoginActivity;
 import visitindia.androcafe.mydocpanelusingfirebase.doctorsappointment.home.FindDoctorsActivity;
 import visitindia.androcafe.mydocpanelusingfirebase.model.Doctor;
 import visitindia.androcafe.mydocpanelusingfirebase.model.MyAppointment;
@@ -42,19 +46,25 @@ public class FindDocAdapter extends RecyclerView.Adapter<FindDocAdapter.MyViewHo
 
     LayoutInflater inflater;
 
-
     ArrayAdapter<String> arrayAdapterTime;
     ArrayAdapter<String> arrayAdapterTreatment;
 
-    private FirebaseDatabase database;
 
     String Time="",Treatment="";
+
+
+    SharedPreferences sharedPreferences;
+    String phoneno;
 
     public FindDocAdapter(FindDoctorsActivity findDoctorsActivity, ArrayList<Doctor> arrayList) {
         this.context=findDoctorsActivity;
         this.arrayList=arrayList;
 
         inflater=LayoutInflater.from(context);
+
+        sharedPreferences=context.getSharedPreferences(LoginActivity.MyPref,Context.MODE_PRIVATE);
+
+        phoneno=sharedPreferences.getString(LoginActivity.phoneno,null);
     }
 
     @NonNull
@@ -69,7 +79,7 @@ public class FindDocAdapter extends RecyclerView.Adapter<FindDocAdapter.MyViewHo
         System.out.println("bind");
          holder.textView_name.setText(" "+arrayList.get(position).getName());
          holder.mobileno.setText("Phone No : "+arrayList.get(position).getPhoneno());
-        // holder.textView_spec.setText("Specialize : "+arrayList.get(position).getSpec());
+         holder.textView_spec.setText("Specialize : "+arrayList.get(position).getSpecialize());
 
         holder.imageViewFav.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -255,7 +265,7 @@ public class FindDocAdapter extends RecyclerView.Adapter<FindDocAdapter.MyViewHo
 
                 if(flag==0)
                 {
-                    insertAppointmentData(doctorName,editText_name.getText().toString(),editText_age.getText().toString(),Treatment,editText_date.getText().toString(),Time,"Pending");
+                    insertAppointmentData(doctorName,editText_name.getText().toString(),editText_age.getText().toString(),Treatment,editText_date.getText().toString(),Time,"Pending",phoneno);
                     dialog.dismiss();
                 }
 
@@ -265,7 +275,9 @@ public class FindDocAdapter extends RecyclerView.Adapter<FindDocAdapter.MyViewHo
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
     }
 
-    private void insertAppointmentData(String doctorName,String name, String age, String treatment, String date, String time,String status) {
+    private void insertAppointmentData(String doctorName, String name, String age, String treatment, String date, String time, String status, String phoneno) {
+        System.out.println("Phone "+phoneno);
+
         DatabaseReference mRef=FirebaseDatabase.getInstance().getReference("myappointments");
 
         // Creating new user node, which returns the unique key value
@@ -273,7 +285,7 @@ public class FindDocAdapter extends RecyclerView.Adapter<FindDocAdapter.MyViewHo
         String userId = mRef.push().getKey();
 
         // creating user object
-        MyAppointment myAppointment = new MyAppointment(doctorName,name,age,treatment,date,time,status);
+        MyAppointment myAppointment = new MyAppointment(doctorName,name,age,treatment,date,time,status,phoneno);
 
         // pushing user to 'users' node using the userId
         mRef.child(userId).setValue(myAppointment);
@@ -291,7 +303,7 @@ public class FindDocAdapter extends RecyclerView.Adapter<FindDocAdapter.MyViewHo
         CircleImageView circleImageView;
         ImageView imageViewFav;
         TextView textView_name;
-       // TextView textView_spec;
+        TextView textView_spec;
         TextView mobileno;
         Button btnCall;
         Button btnBookAppointment;
@@ -300,7 +312,7 @@ public class FindDocAdapter extends RecyclerView.Adapter<FindDocAdapter.MyViewHo
 
             super(itemView);
             textView_name=itemView.findViewById(R.id.textview_name);
-           // textView_spec=itemView.findViewById(R.id.textview_spec);
+            textView_spec=itemView.findViewById(R.id.textview_spec);
             mobileno=itemView.findViewById(R.id.textview_mobile);
             circleImageView=itemView.findViewById(R.id.imageView_doctor);
             btnCall=itemView.findViewById(R.id.button_call);

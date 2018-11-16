@@ -66,7 +66,7 @@ public class FindDoctorsActivity extends AppCompatActivity {
 
                     doctor=noteDataSnapshot.getValue(Doctor.class);
 
-                    Doctor doctor1=new Doctor(doctor.getName(),doctor.getPhoneno(),doctor.getImg(),doctor.getSpec());
+                    Doctor doctor1=new Doctor(doctor.getName(),doctor.getPhoneno(),doctor.getImg(),doctor.getSpecialize());
 
                     Log.d("response",doctor1.getName());
                     arrayListUser.add(doctor1);

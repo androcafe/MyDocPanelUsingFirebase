@@ -1,6 +1,8 @@
 package visitindia.androcafe.mydocpanelusingfirebase.doctorsappointment;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -26,9 +28,11 @@ public class MyAppointmentActivity extends AppCompatActivity {
 
     MyAppointmentAdapter myAppointmentAdapter;
 
-    MyAppointment myAppointment;
-
     ArrayList<MyAppointment> arrayList_my_appointment=new ArrayList<>();
+
+    SharedPreferences sharedPreferences;
+
+    String phoneno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,10 @@ public class MyAppointmentActivity extends AppCompatActivity {
 
         ActionBar actionBar=getSupportActionBar();
         actionBar.setTitle("My Appointment");
+
+        sharedPreferences=getSharedPreferences(LoginActivity.MyPref, Context.MODE_PRIVATE);
+
+        phoneno=sharedPreferences.getString(LoginActivity.phoneno,null);
 
         recyclerView=findViewById(R.id.recyclerview);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(MyAppointmentActivity.this);
@@ -60,9 +68,11 @@ public class MyAppointmentActivity extends AppCompatActivity {
                     Log.d("response","appointment");
                     myAppointment1=noteDataSnapshot.getValue(MyAppointment.class);
 
-                    MyAppointment appointment=new MyAppointment(myAppointment1.getDoctor(),myAppointment1.getName(),myAppointment1.getAge(),myAppointment1.getTreatment(),myAppointment1.getDate(),myAppointment1.getTime(),myAppointment1.getStatus());
-                    System.out.println(""+myAppointment1.getDoctor());
-                    arrayList_my_appointment.add(appointment);
+                    if(myAppointment1.getPhoneno().equals(phoneno)) {
+                        MyAppointment appointment = new MyAppointment(myAppointment1.getDoctor(), myAppointment1.getName(), myAppointment1.getAge(), myAppointment1.getTreatment(), myAppointment1.getDate(), myAppointment1.getTime(), myAppointment1.getStatus(), myAppointment1.getPhoneno());
+                        System.out.println("" + myAppointment1.getDoctor());
+                        arrayList_my_appointment.add(appointment);
+                    }
                 }
 
                 myAppointmentAdapter=new MyAppointmentAdapter(MyAppointmentActivity.this,arrayList_my_appointment);

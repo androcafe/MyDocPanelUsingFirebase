@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
 import visitindia.androcafe.mydocpanelusingfirebase.R;
 import visitindia.androcafe.mydocpanelusingfirebase.doctorsappointment.MyAppointmentActivity;
 import visitindia.androcafe.mydocpanelusingfirebase.model.MyAppointment;
@@ -16,9 +17,10 @@ import visitindia.androcafe.mydocpanelusingfirebase.model.MyAppointment;
 
 public class MyAppointmentAdapter extends RecyclerView.Adapter<MyAppointmentAdapter.MyViewHolder> {
     Context context;
-    ArrayList<MyAppointment> arrayList;
+    ArrayList<MyAppointment> arrayList=new ArrayList<>();
 
     LayoutInflater layoutInflater;
+
 
     public MyAppointmentAdapter(MyAppointmentActivity myAppointmentActivity, ArrayList<MyAppointment> myAppointment) {
         this.context=myAppointmentActivity;
@@ -35,7 +37,6 @@ public class MyAppointmentAdapter extends RecyclerView.Adapter<MyAppointmentAdap
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-
         myViewHolder.textViewDoctor.setText("Doctor : "+arrayList.get(i).getDoctor());
         myViewHolder.textViewPatient.setText("Patient : "+arrayList.get(i).getName());
         myViewHolder.textViewAge.setText("Age : "+arrayList.get(i).getAge());

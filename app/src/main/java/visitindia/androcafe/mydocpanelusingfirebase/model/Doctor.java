@@ -4,17 +4,18 @@ public class Doctor {
     String name;
     String phoneno;
     String img;
-    String spec;
+    String specialize;
 
-    public Doctor(String name, String phoneno, String img,String spec) {
-        this.name = name;
-        this.phoneno = phoneno;
-        this.img = img;
-        this.spec=spec;
-    }
 
     public Doctor() {
 
+    }
+
+    public Doctor(String name, String phoneno, String img, String specialize) {
+        this.name = name;
+        this.phoneno = phoneno;
+        this.img = img;
+        this.specialize = specialize;
     }
 
     public String getName() {
@@ -41,11 +42,11 @@ public class Doctor {
         this.img = img;
     }
 
-    public String getSpec() {
-        return spec;
+    public String getSpecialize() {
+        return specialize;
     }
 
-    public void setSpec(String spec) {
-        this.spec = spec;
+    public void setSpecialize(String specialize) {
+        this.specialize = specialize;
     }
 }

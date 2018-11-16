@@ -8,11 +8,12 @@ public class MyAppointment {
     String date;
     String time;
     String status;
+    String phoneno;
 
     public MyAppointment() {
     }
 
-    public MyAppointment(String doctor, String name, String age, String treatment, String date, String time, String status) {
+    public MyAppointment(String doctor, String name, String age, String treatment, String date, String time, String status, String phoneno) {
         this.doctor = doctor;
         this.name = name;
         this.age = age;
@@ -20,6 +21,15 @@ public class MyAppointment {
         this.date = date;
         this.time = time;
         this.status = status;
+        this.phoneno = phoneno;
+    }
+
+    public String getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
     }
 
     public String getName() {
@@ -62,19 +72,19 @@ public class MyAppointment {
         this.time = time;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
     public void setStatus(String status) {
         this.status = status;
     }
 
-    public String getStatus() {
-        return status;
-    }
-    public String getDoctor() {
-        return doctor;
+    public String getPhoneno() {
+        return phoneno;
     }
 
-    public void setDoctor(String doctor) {
-        this.doctor = doctor;
+    public void setPhoneno(String phoneno) {
+        this.phoneno = phoneno;
     }
-
 }

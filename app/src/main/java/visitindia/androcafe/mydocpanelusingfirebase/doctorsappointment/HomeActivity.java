@@ -90,8 +90,6 @@ public class HomeActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
             finish();
-           // Intent intent=new Intent(HomeActivity.this,LoginActivity.class);
-            //startActivity(intent);
         }
 
 
@@ -128,14 +126,17 @@ public class HomeActivity extends AppCompatActivity
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
 
-        } else if (id == R.id.nav_fav) {
+        }
+        if (id == R.id.nav_fav) {
 
-        } else if (id == R.id.nav_boobking_status) {
+        }
+        if (id == R.id.nav_boobking_status) {
             Intent intent=new Intent(HomeActivity.this,MyAppointmentActivity.class);
             startActivity(intent);
             finish();
 
-        } else if (id == R.id.nav_sign_out) {
+        }
+        if (id == R.id.nav_sign_out) {
             SharedPreferences sharedPreferences=getSharedPreferences(LoginActivity.MyPref,MODE_PRIVATE);
             SharedPreferences.Editor editor=sharedPreferences.edit();
             editor.clear();

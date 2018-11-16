@@ -27,7 +27,6 @@
                 android:padding="5dp"
                 android:textSize="17sp"
                 android:textColor="@android:color/black"
-                android:text="@string/string_doctor"
                 android:id="@+id/textview_doctor"/>
 
 
@@ -37,7 +36,6 @@
                 android:padding="5dp"
                 android:textSize="17sp"
                 android:textColor="@android:color/black"
-                android:text="@string/string_pateint"
                 android:id="@+id/textview_patient"/>
 
 
@@ -46,7 +44,6 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:textSize="17sp"
-                android:text="@string/string_age"
                 android:textColor="@android:color/black"
                 android:id="@+id/textview_age"/>
 
@@ -56,7 +53,6 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:textSize="17sp"
-                android:text="@string/string_date_apmt"
                 android:textColor="@android:color/black"
                 android:id="@+id/textview_date"/>
 
@@ -65,7 +61,6 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:textSize="17sp"
-                android:text="@string/string_time"
                 android:textColor="@android:color/black"
                 android:id="@+id/textview_time"/>
 
@@ -74,7 +69,6 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:textSize="17sp"
-                android:text="@string/string_status"
                 android:textColor="@android:color/holo_red_dark"
                 android:id="@+id/textview_status"/>
 
