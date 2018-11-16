@@ -10,6 +10,10 @@
 <b>Crashlytics</b> : Prioritize and fix issues with powerful, realtime crash reporting<br>
     and much more.
     
+<b>Steps to create project in firebase console : </b>
+1. Add the Realtime Database to your app
+
+    
 Output for following project :
 <div align="center">
     <img src="https://user-images.githubusercontent.com/35371687/48602507-58918500-e999-11e8-849c-e57b3db23130.png" width="400px" hspace="20"></img> 
