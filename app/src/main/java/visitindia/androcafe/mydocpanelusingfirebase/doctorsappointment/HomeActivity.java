@@ -54,7 +54,7 @@ public class HomeActivity extends AppCompatActivity
         textViewPhoneNo=headerView.findViewById(R.id.phoneno);
         SharedPreferences sharedPreferences=getSharedPreferences(LoginActivity.MyPref,MODE_PRIVATE);
         String phoneno=sharedPreferences.getString("phoneno",null);
-        textViewPhoneNo.setText(""+phoneno);
+        textViewPhoneNo.setText("User No : "+phoneno);
 
         viewPager =findViewById(R.id.viewpager);
         viewPager.setAdapter(new ViewPagerAdapter(HomeActivity.this,images));
